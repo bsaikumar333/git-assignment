@@ -1,0 +1,96 @@
+================================================================================
+GIT COMMANDS REFERENCE - UNIVERSITY ASSIGNMENT WORKFLOW
+================================================================================
+Repository: https://github.com/bsaikumar333/git-assignment
+Project: GitAssignment (index.html, about.html, .gitignore, README.md)
+================================================================================
+
+git init
+Initializes a brand-new local Git repository in the current project directory.
+
+git branch -M main
+Renames the default initial branch to 'main' ensuring modern standard branch naming.
+
+git status
+Inspects and displays the state of the working directory and staging area, highlighting untracked, modified, or staged files.
+
+git add .
+Stages all new, modified, and tracked files across the workspace for the upcoming commit.
+
+git commit -m "Initial project setup"
+Creates the initial root commit capturing the baseline project structure with index.html and about.html.
+
+git add index.html
+Stages modifications made specifically to index.html to the Git staging index.
+
+git commit -m "Updated index page"
+Records the modifications and content additions in index.html to the repository history.
+
+git branch feature
+Creates a new branch named 'feature' branching off from the current commit on main.
+
+git checkout feature
+Switches the active working branch from 'main' to the newly created 'feature' branch.
+
+git branch
+Lists all local branches in the repository and highlights the currently active branch with an asterisk (*).
+
+git add about.html
+Stages the new content and updates made to about.html on the feature branch.
+
+git commit -m "Added feature updates"
+Commits the changes made to about.html onto the feature branch.
+
+git checkout main
+Switches the active branch back to 'main' in preparation for merging branch updates.
+
+git merge feature
+Merges the commits and changes from the 'feature' branch into the active 'main' branch via fast-forward.
+
+git log --oneline --graph --all
+Displays a compact, one-line graphical visual representation of the entire commit history across all branches.
+
+git check-ignore -v sample.log temp/temp_file.txt
+Tests and verifies that the pattern rules in .gitignore correctly match and suppress tracking of specified files and folders.
+
+git add .gitignore
+Stages the .gitignore configuration file containing patterns for *.log and temp/.
+
+git commit -m "Add .gitignore to ignore log files and temp directory"
+Commits the .gitignore configuration file into version control.
+
+git add README.md
+Stages the newly created README.md documentation file for version tracking.
+
+git commit -m "Update README"
+Creates a commit recording the addition of project documentation before demonstrating the undo workflow.
+
+git log -n 3 --oneline
+Displays the latest three commits in a condensed one-line format to verify commit history before and after an undo.
+
+git reset --soft HEAD~1
+Safely undoes the most recent commit by rewinding the HEAD pointer by one commit while keeping all changes staged and working files completely intact.
+
+git commit -m "Add project README documentation"
+Re-commits the verified README documentation file cleanly into the repository history.
+
+git remote add origin https://github.com/bsaikumar333/git-assignment.git
+Connects the local Git repository to the remote public repository hosted on GitHub.
+
+git remote -v
+Verifies and lists the remote repository URLs configured for fetch and push operations.
+
+git push origin main:main feature:feature
+Pushes both the local 'main' branch and the 'feature' branch with their complete histories to GitHub.
+
+git restore .
+Discards unstaged modifications in the working tree, ensuring a completely clean working state.
+
+git add git_commands.txt
+Stages the comprehensive Git command documentation reference file.
+
+git commit -m "Add git_commands.txt documenting all workflow commands and explanations"
+Records the command reference log into the repository version history.
+
+git push origin main
+Pushes the updated main branch containing the command documentation up to GitHub.
